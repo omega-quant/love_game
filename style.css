@@ -1,31 +1,18 @@
 body {
   margin: 0;
   overflow: hidden;
-  font-family: Arial, sans-serif;
+  font-family: Arial;
   background: radial-gradient(circle, #1a1a2e, #000);
   color: white;
 }
 
-/* Canvas */
 canvas {
   display: block;
   margin: auto;
   border-radius: 15px;
-  box-shadow: 0 0 30px pink;
+  box-shadow: 0 0 25px pink;
 }
 
-/* HUD */
-#hud {
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  font-size: 20px;
-  background: rgba(255,255,255,0.1);
-  padding: 8px 15px;
-  border-radius: 10px;
-}
-
-/* Screens */
 .screen {
   position: absolute;
   width: 100%;
@@ -35,25 +22,43 @@ canvas {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
 }
 
 .hidden {
   display: none;
 }
 
-/* Buttons */
 button {
   padding: 12px 25px;
   font-size: 18px;
-  border: none;
   border-radius: 10px;
+  border: none;
   background: pink;
-  cursor: pointer;
-  transition: 0.3s;
 }
 
-button:hover {
-  transform: scale(1.1);
-  background: hotpink;
+/* HUD */
+#hud {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+/* MOBILE CONTROLS */
+#controls {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#controls button {
+  width: 90px;
+  height: 90px;
+  font-size: 32px;
+  border-radius: 50%;
+  background: rgba(255,105,180,0.8);
+  color: white;
 }
