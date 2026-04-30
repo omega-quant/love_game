@@ -28,8 +28,11 @@
 
 <!-- MOBILE CONTROLS -->
 <div id="controls">
-  <button ontouchstart="startMove('ArrowUp')" ontouchend="stopMove('ArrowUp')">⬆</button>
-  <div>
+  <div class="up">
+    <button ontouchstart="startMove('ArrowUp')" ontouchend="stopMove('ArrowUp')">⬆</button>
+  </div>
+
+  <div class="middle">
     <button ontouchstart="startMove('ArrowLeft')" ontouchend="stopMove('ArrowLeft')">⬅</button>
     <button ontouchstart="startMove('ArrowRight')" ontouchend="stopMove('ArrowRight')">➡</button>
   </div>
