@@ -7,33 +7,34 @@
 
 <body>
 
-<!-- HUD -->
-<div id="hud">
-  <div id="score">Score: 0</div>
-</div>
-
-<!-- Start Screen -->
 <div id="startScreen" class="screen">
   <h1>❤️ Love Runner</h1>
   <button onclick="startGame()">Start</button>
 </div>
 
-<!-- Canvas -->
+<div id="hud">Score: 0</div>
+
 <canvas id="gameCanvas"></canvas>
 
-<!-- Game Over -->
 <div id="gameOverScreen" class="screen hidden">
   <h1>💔 Game Over</h1>
-  <button onclick="restartGame()">Retry</button>
+  <button onclick="restartGame()">Restart</button>
 </div>
 
-<!-- Win Screen -->
 <div id="winScreen" class="screen hidden">
-  <h1>💖 You Met Your Love 💖</h1>
+  <h1>💖 Together Forever 💖</h1>
   <button onclick="restartGame()">Play Again</button>
 </div>
 
-<script src="script.js"></script>
+<!-- MOBILE CONTROLS -->
+<div id="controls">
+  <button ontouchstart="startMove('ArrowUp')" ontouchend="stopMove('ArrowUp')">⬆</button>
+  <div>
+    <button ontouchstart="startMove('ArrowLeft')" ontouchend="stopMove('ArrowLeft')">⬅</button>
+    <button ontouchstart="startMove('ArrowRight')" ontouchend="stopMove('ArrowRight')">➡</button>
+  </div>
+</div>
 
+<script src="script.js"></script>
 </body>
 </html>
